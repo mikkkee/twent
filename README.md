@@ -3,6 +3,18 @@
 ## About
 Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Python script that allows you to display time, weather, and rss feeds in a text console.
 
+## Install
+### Requirements
+
+Twent uses [feedparser](https://pypi.python.org/pypi/feedparser) to parse rss feeds and [pyfiglet](https://pypi.python.org/pypi/pyfiglet/) to display time.
+
+### Installation and Running
+```
+git clone git@github.com:mikkkee/twent.git
+cd twent
+python twent.py 0
+```
+
 ## Usage
 ```
 usage: twent.py [-h] Flags [Flags ...]
@@ -26,6 +38,7 @@ In config.ini, you can customize the following settings:
 + You can add rss feeds here, using name = value format. 
 + name can be used as a flag to specify which feed to use when running.
 + value is url of the rss feed.
++ Default values are [Hacker News (50 points and above)](http://feeds.feedburner.com/hacker-news-feed-50?format=rss) and [The Wall Street Journal - World News](http://online.wsj.com/xml/rss/3_7085.xml)
 
 ###[weather] section
 
