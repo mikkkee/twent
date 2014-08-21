@@ -8,6 +8,8 @@ Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Pyt
 
 Twent uses [feedparser](https://pypi.python.org/pypi/feedparser) to parse rss feeds and [pyfiglet](https://pypi.python.org/pypi/pyfiglet/) to display time.
 
+You need to have them installed to run twent.
+
 ### Installation and Running
 ```
 git clone git@github.com:mikkkee/twent.git
@@ -26,14 +28,14 @@ Numbers and `name`s cannot be used together.
 
 If numbers are used, the numbers corresponding to the order of rss feeds in config.ini, starting from 1.
 
-Use 0 as `Flag` to display all feeds together.
+Use `0` as `Flag` to display all feeds together.
 
 Press `Ctrl-C` to stop twent.
 
 ## Configuration
 In config.ini, you can customize the following settings:
 
-###[rss] section
+###`[rss]` section
 
 + You can add rss feeds here, using `name = value` format. 
 + `name` can be used as a `Flag` to choose the corresponding feed when running.
