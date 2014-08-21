@@ -1,6 +1,9 @@
 # Twent (Time, WEather, and News in Terminal)
+
+## About
 Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Python script that allows you to display time, weather, and rss feeds in a text console.
 
+## Usage
 ```
 usage: twent.py [-h] Flags [Flags ...]
 ```
