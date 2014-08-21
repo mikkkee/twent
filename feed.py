@@ -38,12 +38,14 @@ def weather_now(code,unit):
   para = {'w': code, 'u': unit.lower()}
   feed_url = yahoo_api + urlencode(para)
   f = feedparser.parse(feed_url)
+  f_city = f['feed']['yweather_location']['city']
   f_entries = f['entries']
   f_forecast = f_entries[0]['yweather_forecast']
   weather_heading = '=============Weather==============\n'
-  weather_details = "{f[text]} {f[low]}{c}-{f[high]}{c} Singapore\n".format(
+  weather_details = "{f[text]} {f[low]}{c}-{f[high]}{c} {city}\n".format(
     f=f_forecast,
-    c=u'\u00b0'.encode('utf-8')
+    c=u'\u00b0'.encode('utf-8'),
+    city=f_city
     )
   return (weather_heading + weather_details).decode('utf-8')
   
