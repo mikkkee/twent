@@ -3,6 +3,12 @@
 ## About
 Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Python script that allows you to display time, weather, and rss feeds in a text console.
 
+## Screenshot
+
+![Screenshot](https://www.dropbox.com/s/cje9fjxptmauj9p/twent_screenshot.PNG?dl=1)
+
+Using world news feed from The Wall Street Journal.
+
 ## Installtion
 ### Requirements
 
@@ -53,8 +59,3 @@ In config.ini, you can customize the following settings:
 + `duration` stands for the time that twent should run, in minutes.
 + Default value `0` stands for running forever.
 
-## Screenshot
-
-![Screenshot](https://www.dropbox.com/s/cje9fjxptmauj9p/twent_screenshot.PNG?dl=1)
-
-Using world news feed from The Wall Street Journal.
