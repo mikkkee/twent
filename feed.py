@@ -5,6 +5,7 @@ import subprocess
 import datetime
 import time
 import string
+import argparse
 import ConfigParser
 from urllib import urlencode
 import feedparser
@@ -93,8 +94,14 @@ def news_now(rows,columns,rss_list,rss_option):
       feed_list = [x for x in rss_list if rss_list.index(x)+1 in rss_option]
       feed_content = read_rss(feed_list,f_num,columns)
   else:
-    feed_list = [(x,rss_dict[x]) for x in rss_options]
-    feed_content = read_rss(feed_list,f_num,columns)
+    try:
+      feed_list = [(x,rss_dict[x]) for x in rss_option]
+      feed_content = read_rss(feed_list,f_num,columns)
+    except KeyError as e:
+      sys.exit('Invalid Flag: ' + e.message)
+    except:
+      print("Unexpected error:", sys.exc_info()[0])
+      raise
 
   news_heading = '===============News===============\n'
   news_details = ''
@@ -112,10 +119,15 @@ def console_size():
   return rows,columns
 
 def main(argv):
-  rss_option = argv[1:] if len(argv) > 1 else '0'
+  parser = argparse.ArgumentParser(description='Feed choose flags.')
+  parser.add_argument('flags',metavar='Flags',type=str,nargs='+',
+		      help='numbers or names of feeds.')
+  args = parser.parse_args(argv[1:])
+  rss_option = args.flags
   city_code,unit,duration,rss_list = read_config()
+  end = time.time() + duration * 60
   try:
-    while True:
+    while time.time() < end if duration !=0 else True:
       rows,columns = console_size()
       now = time_now()
       weather = weather_now(city_code,unit)
@@ -124,6 +136,8 @@ def main(argv):
       clear_console()
       print(content)
       time.sleep(60)
+    else:
+      sys.exit('Time up. Exit now.')
   except KeyboardInterrupt:
     sys.exit(1)
 if __name__ == '__main__':
