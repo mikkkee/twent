@@ -3,7 +3,7 @@
 ## About
 Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Python script that allows you to display time, weather, and rss feeds in a text console.
 
-## Install
+## Installtion
 ### Requirements
 
 Twent uses [feedparser](https://pypi.python.org/pypi/feedparser) to parse rss feeds and [pyfiglet](https://pypi.python.org/pypi/pyfiglet/) to display time.
@@ -35,18 +35,18 @@ In config.ini, you can customize the following settings:
 
 ###[rss] section
 
-+ You can add rss feeds here, using name = value format. 
-+ name can be used as a flag to specify which feed to use when running.
-+ value is url of the rss feed.
++ You can add rss feeds here, using `name = value` format. 
++ `name` can be used as a flag to specify which feed to use when running.
++ `value` is url of the rss feed.
 + Default values are [Hacker News (50 points and above)](http://feeds.feedburner.com/hacker-news-feed-50?format=rss) and [The Wall Street Journal - World News](http://online.wsj.com/xml/rss/3_7085.xml)
 
 ###[weather] section
 
-+ city stands for the location code used in yahoo weather api.
++ `city` stands for the location code used in yahoo weather api.
 + You can find location code for you city by searching you city in yahoo weather. For example, the location code for New York is 2459115, the corresponding url for New York is https://weather.yahoo.com/united-states/new-york/new-york-2459115/ 
-+ unit can be F or C, case insensitive, stands for Fahrenheit or Celsius, respictively.
++ `unit` can be F or C, case insensitive, stands for Fahrenheit or Celsius, respictively.
 
 ###[duration] section
 
-+ duration stands for the time that twent should run, in minutes.
++ `duration` stands for the time that twent should run, in minutes.
 + Default value 0 stands for running forever.
