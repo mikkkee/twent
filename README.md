@@ -35,7 +35,7 @@ Press `Ctrl-C` to stop twent.
 ## Configuration
 In config.ini, you can customize the following settings:
 
-###`[rss]` section
+###[rss] section
 
 + You can add rss feeds here, using `name = value` format. 
 + `name` can be used as a `Flag` to choose the corresponding feed when running.
