@@ -32,7 +32,7 @@ usage: twent.py [-h] Flag [Flags ...]
 
 Numbers and `name`s cannot be used together. 
 
-If numbers are used, the numbers corresponding to the order of rss feeds in config.ini, starting from 1.
+If numbers are used, the numbers correspond to the order of rss feeds in config.ini, starting from 1.
 
 Use `0` as `Flag` to display all feeds together.
 
