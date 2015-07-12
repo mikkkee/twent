@@ -5,7 +5,7 @@ Twent (<b>T</b>ime, <b>WE</b>ather, and <b>N</b>ews in <b>T</b>erminal) is a Pyt
 
 ## Screenshot
 
-![Screenshot](https://www.dropbox.com/s/cje9fjxptmauj9p/twent_screenshot.PNG?dl=1)
+![Screenshot](https://www.dropbox.com/s/vgxek8mgkcup76y/twent_screenshot.PNG?dl=1)
 
 Using world news feed from The Wall Street Journal.
 
